@@ -1,6 +1,6 @@
 <?php 
 
-$postData='<XML>
+$postData= '<XML>
 <Tenant>
     <Name>VantageDebt</Name>
     <Auth>033b21e5601ed34dcae60f85fecb314e</Auth>
@@ -10,6 +10,8 @@ $postData='<XML>
 <startDate>2021-04-01 </startDate>
 <endDate>2021-04-01</endDate>
 </XML>';
+
+
 $curl = curl_init();
 curl_setopt_array($curl, array(
   CURLOPT_URL => 'https://api.euphoria.co.za/Euphoria.Api.aspx',
@@ -27,8 +29,15 @@ curl_setopt_array($curl, array(
   ),
 ));
 
+
 $response = curl_exec($curl);
 curl_close($curl);
+
+
+
+
+
+
 $queue = simplexml_load_string( $response );
 
 ?>

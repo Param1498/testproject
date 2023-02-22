@@ -1,0 +1,49 @@
+.loader-main > div {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    color: #fff;
+    vertical-align: middle;
+    pointer-events: none;
+    margin: auto !important;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    border-radius: 50% !important;
+}
+.loader-inner {
+  border: 4px dotted currentcolor;
+  border-radius: 50%;
+  -webkit-animation: 2s loader-inner linear infinite;
+  animation: 2s loader-inner linear infinite;
+}
+@-webkit-keyframes loader-inner {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+@keyframes loader-inner {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+.loader-main {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 9999999;
+    top: 0;
+    left: 0;
+    background: #0000008a;
+}
